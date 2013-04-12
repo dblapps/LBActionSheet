@@ -640,13 +640,26 @@ static UIImageView* blockView = nil;
 }
 
 -(void)_dismiss:(BOOL)animated completion:(void (^)(BOOL))completion {
-    [self _animateFromTransform:self.transform fromAlpha:1.0f toTransform:CGAffineTransformTranslate(self.transform, 0.0f, CGRectGetHeight(self.frame)) toAlpha:0.0f duration:(animated) ? kLBActionSheetAnimationDuration : 0.0f completion:^(BOOL finished) {
-        self.visible = NO;
-        
-        if (completion) {
-            completion(finished);
-        }
-    }];
+	if (animated) {
+		[self _animateFromTransform:self.transform
+						  fromAlpha:1.0f
+						toTransform:CGAffineTransformTranslate(self.transform, 0.0f, CGRectGetHeight(self.frame))
+							toAlpha:0.0f
+						   duration:kLBActionSheetAnimationDuration
+						 completion:^(BOOL finished) {
+							 self.visible = NO;
+							 if (completion) {
+								 completion(finished);
+							 }
+						 }];
+	} else {
+		self.transform = CGAffineTransformTranslate(self.transform, 0.0f, CGRectGetHeight(self.frame));
+		self.alpha = 0.0f;
+		self.visible = NO;
+		if (completion) {
+			completion(YES);
+		}
+	}
 }
 
 -(void)dismissWithClickedButtonIndex:(NSUInteger)buttonIndex animated:(BOOL)animated {
