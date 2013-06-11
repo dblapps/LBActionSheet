@@ -17,6 +17,7 @@ typedef enum _LBActionSheetButtonType {
 
 const CGFloat kLBActionSheetAnimationDuration = 0.3f;
 static UIWindow* blockWindow = nil;
+static UIWindow* restoreWindow = nil;
 static UIImageView* blockView = nil;
 
 @interface LBActionSheet () {
@@ -183,6 +184,9 @@ static UIImageView* blockView = nil;
             
             [self setNeedsLayout];
             
+			if ([[UIDevice currentDevice].systemVersion floatValue] < 6.0f) {
+				restoreWindow = [UIApplication sharedApplication].keyWindow;
+			}
             [self.blockWindow makeKeyAndVisible];
             [self.blockWindow addSubview:self];
             [self.blockWindow bringSubviewToFront:self];
@@ -190,6 +194,12 @@ static UIImageView* blockView = nil;
         else {
             [self removeFromSuperview];
             self.blockWindow.hidden = YES;
+			if ([[UIDevice currentDevice].systemVersion floatValue] < 6.0f) {
+				if (restoreWindow != nil) {
+					[restoreWindow makeKeyAndVisible];
+					restoreWindow = nil;
+				}
+			}
         }
     }
 }
