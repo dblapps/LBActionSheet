@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EE12C147-9C64-4AC5-927A-CE02342679A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LBActionSheet</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BE24A312-57DE-441E-A673-953E9C6B2B79</key>
+		<string>https://github.com/dblapps/LBActionSheet.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Sample/LBActionSheet.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BE24A312-57DE-441E-A673-953E9C6B2B79</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dblapps/LBActionSheet.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BE24A312-57DE-441E-A673-953E9C6B2B79</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BE24A312-57DE-441E-A673-953E9C6B2B79</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LBActionSheet</string>
+		</dict>
+	</array>
+</dict>
+</plist>

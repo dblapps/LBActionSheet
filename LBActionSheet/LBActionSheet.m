@@ -456,8 +456,8 @@ static UIImageView* blockView = nil;
     
     [self.controls enumerateObjectsUsingBlock:^(UIButton* obj, NSUInteger idx, BOOL *stop) {
         if (obj.tag != LBActionSheetCustomButtonType && [obj isKindOfClass:[UIButton class]]) {
-            [obj setBackgroundImage:[self _buttonBackgroundImageForState:UIControlStateNormal type:obj.tag] forState:UIControlStateNormal];
-            [obj setBackgroundImage:[self _buttonBackgroundImageForState:UIControlStateHighlighted type:obj.tag] forState:UIControlStateHighlighted];
+            [obj setBackgroundImage:[self _buttonBackgroundImageForState:UIControlStateNormal type:(LBActionSheetButtonType)obj.tag] forState:UIControlStateNormal];
+            [obj setBackgroundImage:[self _buttonBackgroundImageForState:UIControlStateHighlighted type:(LBActionSheetButtonType)obj.tag] forState:UIControlStateHighlighted];
         }
     }];
 }
@@ -486,8 +486,8 @@ static UIImageView* blockView = nil;
     
     [self.controls enumerateObjectsUsingBlock:^(UIButton* obj, NSUInteger idx, BOOL *stop) {
         if (obj.tag != LBActionSheetCustomButtonType && [obj isKindOfClass:[UIButton class]]) {
-            [self _button:obj setTitleAttributes:[self _buttonTitleAttributesForState:UIControlStateNormal type:obj.tag] forState:UIControlStateNormal];
-            [self _button:obj setTitleAttributes:[self _buttonTitleAttributesForState:UIControlStateHighlighted type:obj.tag] forState:UIControlStateHighlighted];
+            [self _button:obj setTitleAttributes:[self _buttonTitleAttributesForState:UIControlStateNormal type:(LBActionSheetButtonType)obj.tag] forState:UIControlStateNormal];
+            [self _button:obj setTitleAttributes:[self _buttonTitleAttributesForState:UIControlStateHighlighted type:(LBActionSheetButtonType)obj.tag] forState:UIControlStateHighlighted];
         }
     }];
 }
